@@ -67,4 +67,11 @@ Now that we have both sides of the U architecture, we can put all together and c
 ```{python}
 model = unet_model_2d(loss_function=soft_dice_loss, input_shape=(572,572,3), metrics=[dice_coefficient], depth=5, n_labels=4, deconvolution=True)
 ```
+
+If you want to work with 3D, you can just type
+
+```{python}
+model = unet_model_3d(loss_function=soft_dice_loss, metrics=[dice_coefficient])
+```
+
 You can see the application of an example in the `Train U-Net.ipynb` notebook. 
